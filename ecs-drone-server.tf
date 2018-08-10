@@ -20,6 +20,7 @@ data "template_file" "drone_server_task_definition" {
     drone_version          = "${var.drone_version}"
     drone_server_port      = "${var.drone_server_port}"
     drone_agent_port       = "${var.drone_agent_port}"
+    drone_admin            = "${var.drone_admin}"
   }
 }
 

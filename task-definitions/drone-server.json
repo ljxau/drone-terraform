@@ -21,6 +21,8 @@
       { "name": "DRONE_GITHUB_CLIENT", "value": "${drone_github_client}" },
       { "name": "DRONE_GITHUB_SECRET", "value": "${drone_github_secret}" },
       { "name": "DRONE_SECRET", "value": "${drone_secret}" },
+      { "name": "DRONE_ADMIN", "value": "${drone_admin}" },
+
       { "name": "DRONE_DATABASE_DRIVER", "value": "mysql" },
       { "name": "DRONE_DATABASE_DATASOURCE", "value": "${db_user}:${db_password}@tcp(${db_name}:3306)/drone?parseTime=true" }
     ],

@@ -1,6 +1,7 @@
 {
   "Version": "2012-10-17",
-  "Statement": [{
+  "Statement": [
+    {
       "Sid": "ecsInstanceRole",
       "Effect": "Allow",
       "Action": [
@@ -26,6 +27,15 @@
       "Resource": [
         "${server_log_group_arn}",
         "${agent_log_group_arn}"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "sts:AssumeRole",
+      "Resource": [
+        "arn:aws:iam::${dev_account_id}:role/ci",
+        "arn:aws:iam::${prod_account_id}:role/ci",
+        "arn:aws:iam::${staging_account_id}:role/ci"
       ]
     }
   ]

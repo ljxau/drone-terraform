@@ -1,11 +1,3 @@
-variable "aws_access_key" {
-  description = "aws access key."
-}
-
-variable "aws_secret_key" {
-  description = "aws secret key."
-}
-
 variable "aws_region" {
   description = "aws region."
   default     = "us-east-1"
@@ -151,4 +143,20 @@ variable "drone_desired_count_agent" {
 
 variable "ssh_public_key" {
   description = "The public key material. SSH public key file format as specified in RFC4716"
+}
+
+variable "drone_admin" {
+  description = "Drone admins, separated by comma"
+}
+
+variable "prod_account_id" {
+  description = "Prod account id"
+}
+
+variable "staging_account_id" {
+  description = "Staging account id"
+}
+
+variable "dev_account_id" {
+  description = "Dev account id"
 }

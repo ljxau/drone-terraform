@@ -117,6 +117,9 @@ data "template_file" "ec2_profile" {
   vars {
     server_log_group_arn = "${aws_cloudwatch_log_group.drone_agent.arn}"
     agent_log_group_arn  = "${aws_cloudwatch_log_group.drone_server.arn}"
+    dev_account_id       = "${var.dev_account_id}"
+    staging_account_id   = "${var.staging_account_id}"
+    prod_account_id      = "${var.prod_account_id}"
   }
 }
 
