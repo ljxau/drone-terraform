@@ -33,6 +33,22 @@ resource "aws_alb_listener" "front_end_80" {
   port              = "80"
   protocol          = "HTTP"
 
+  lifecycle {
+    ignore_changes = ["default_action"]
+  }
+
+  default_action {
+    target_group_arn = "${aws_alb_target_group.drone.id}"
+    type             = "forward"
+  }
+}
+
+resource "aws_alb_listener" "front_end_443" {
+  load_balancer_arn = "${aws_alb.front.id}"
+  port              = "443"
+  protocol          = "HTTPS"
+  certificate_arn   = "${aws_acm_certificate.cert.arn}"
+
   default_action {
     target_group_arn = "${aws_alb_target_group.drone.id}"
     type             = "forward"
