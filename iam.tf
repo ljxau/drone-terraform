@@ -120,6 +120,7 @@ data "template_file" "ec2_profile" {
     dev_account_id       = "${var.dev_account_id}"
     staging_account_id   = "${var.staging_account_id}"
     prod_account_id      = "${var.prod_account_id}"
+    indian_account_id    = "${var.indian_account_id}"
   }
 }
 

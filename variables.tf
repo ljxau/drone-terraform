@@ -43,7 +43,7 @@ variable "instance_class" {
 
 variable "instance_type" {
   description = "EC2 Instance Type."
-  default     = "t2.micro"
+  default     = "t3.large"
 }
 
 variable "db_name" {
@@ -159,4 +159,8 @@ variable "staging_account_id" {
 
 variable "dev_account_id" {
   description = "Dev account id"
+}
+
+variable "indian_account_id" {
+  description = "Indian account id"
 }

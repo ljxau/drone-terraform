@@ -35,7 +35,8 @@
       "Resource": [
         "arn:aws:iam::${dev_account_id}:role/ci",
         "arn:aws:iam::${prod_account_id}:role/ci",
-        "arn:aws:iam::${staging_account_id}:role/ci"
+        "arn:aws:iam::${staging_account_id}:role/ci",
+        "arn:aws:iam::${indian_account_id}:role/ci"
       ]
     }
   ]
